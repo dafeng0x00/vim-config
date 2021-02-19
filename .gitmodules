@@ -1,0 +1,6 @@
+[submodule "vim/pack/vendor/start/nerdtree"]
+	path = vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "vim/pack/vendor/opt/onedark.vim"]
+	path = vim/pack/vendor/opt/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
