@@ -6,6 +6,9 @@ call plug#begin()
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 call plug#end()
 
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+
 set nu 
 set tabstop=2
 set shiftwidth=2
