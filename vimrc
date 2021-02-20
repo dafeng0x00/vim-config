@@ -6,8 +6,21 @@ call plug#begin()
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 call plug#end()
 
+"let $GTAGSLABEL = 'native-pygments'
+"let $GTAGSCONF = '~/.vim/gtags.conf'
+"let $GTAGSLABEL = 'pygments'
+"let $GTAGSCONF = '/Users/mac/vim-config/gtags.conf'
+
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
+let g:Lf_GtagsSource = 1
+let g:Lf_GtagsAutoGenerate = 1
+let g:Lf_Gtagsconf = '/Users/mac/vim-config/gtags.conf'
+"let g:Lf_Ctags = 'd:/software/gtags/bin/gtags.exe'
+"let g:Lf_Gtagslabel = 'native-pygments'
+"解析js需要安装 pip install pygments'
+let g:Lf_Gtagslabel = 'pygments'
+let g:Lf_GtagsSkipUnreadable = 1
 let g:Lf_WildIgnore = {
   \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh','node_modules', 'dist'],
   \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
@@ -48,8 +61,9 @@ let g:lightline = {
 let g:airline_theme='onedark'
 
 autocmd vimenter * NERDTree
-let NERDTreeWinSize=25
 nmap <F2> :NERDTree<CR>
+let NERDTreeWinSize=25
+let NERDTreeShowHidden=1
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
