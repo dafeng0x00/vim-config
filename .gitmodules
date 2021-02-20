@@ -13,3 +13,6 @@
 [submodule "vim-config/vim/pack/vendor/start/vim-polyglot"]
 	path = vim-config/vim/pack/vendor/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
+[submodule "vim/pack/vendor/start/fugitive"]
+	path = vim/pack/vendor/start/fugitive
+	url = https://tpope.io/vim/fugitive.git
