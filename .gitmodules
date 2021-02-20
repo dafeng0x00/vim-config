@@ -7,3 +7,9 @@
 [submodule "vim/pack/vendor/start/vim-airline"]
 	path = vim/pack/vendor/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
+[submodule "vim-config/vim/pack/vendor/start/vim-javascript"]
+	path = vim-config/vim/pack/vendor/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim-config/vim/pack/vendor/start/vim-polyglot"]
+	path = vim-config/vim/pack/vendor/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
