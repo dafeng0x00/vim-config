@@ -17,11 +17,11 @@ let g:Lf_GtagsSource = 1
 let g:Lf_GtagsAutoGenerate = 1
 let g:Lf_Gtagsconf = '/Users/mac/vim-config/gtags.conf'
 "需要安装https://github.com/universal-ctags/ctags
-let g:Lf_Ctags = '/usr/local/bin/ctags'
-"let g:Lf_Gtagslabel = 'native-pygments'
+"let g:Lf_Ctags = '/usr/local/bin/ctags'
+let g:Lf_Gtagslabel = 'native-pygments'
 "解析js需要安装 pip install pygments'
 "let g:Lf_Gtagslabel = 'pygments'
-let g:Lf_Gtagslabel = 'new-ctags'
+"let g:Lf_Gtagslabel = 'new-ctags'
 let g:Lf_GtagsSkipUnreadable = 1
 let g:Lf_WildIgnore = {
   \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh','node_modules', 'dist'],
