@@ -4,6 +4,7 @@ packadd! onedark.vim
 
 call plug#begin()
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 "let $GTAGSLABEL = 'native-pygments'
@@ -26,13 +27,30 @@ let g:Lf_GtagsSkipUnreadable = 1
 let g:Lf_WildIgnore = {
   \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh','node_modules', 'dist'],
   \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
-  \}
+  \ }
 let g:Lf_RgConfig = [
   \ "--max-columns=150",
   \ "--glob=!node_modules/*",
   \ "--glob=!dist/*",
   \ "--glob=!yarn.lock"
   \ ]
+
+let g:LanguageClient_serverCommands = {
+  \ 'vue': ['vls']
+  \ }
+
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+
+"let g:indentLine_setColors = 0
+let g:indentLine_defaultGroup = 'SpecialKey'
+"let g:indentLine_color_term = 239
+"let g:indentLine_char = 'c'
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_concealcursor = 'inc'
+let g:indentLine_conceallevel = 2
+let g:indentLine_setConceal = 0
+let g:indentLine_enabled = 1
 
 
 set nu 
