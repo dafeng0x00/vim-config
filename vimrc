@@ -5,6 +5,7 @@ packadd! onedark.vim
 call plug#begin()
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 "let $GTAGSLABEL = 'native-pygments'
@@ -66,6 +67,7 @@ set cindent
 set smartindent
 set term=screen
 set guioptions-=m
+set cmdheight=1
 
 imap () ()<Left>
 imap [] []<Left>
@@ -93,10 +95,10 @@ let g:SuperTabDefaultCompletionType="context"
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
-augroup javascript_folding
-  au!
-  au FileType javascript setlocal foldmethod=syntax
-augroup END
+"augroup javascript_folding
+"  au!
+"  au FileType javascript setlocal foldmethod=syntax
+"augroup END
 let g:javascript_conceal_function             = "ƒ"
 let g:javascript_conceal_null                 = "ø"
 let g:javascript_conceal_this                 = "@"
