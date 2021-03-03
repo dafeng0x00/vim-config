@@ -2,10 +2,22 @@ syntax enable
 
 packadd! onedark.vim
 
+if has("termguicolors")
+  " fix bug for vim
+  set t_8f=^[[38;2;%lu;%lu;%lum
+  set t_8b=^[[48;2;%lu;%lu;%lum
+
+  " enable true color
+  set termguicolors
+endif
+
 call plug#begin()
-Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mattn/emmet-vim'
+  Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'mattn/emmet-vim'
+  Plug 'hzchirs/vim-material'
+  Plug 'cormacrelf/vim-colors-github'
+  Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "let $GTAGSLABEL = 'native-pygments'
@@ -68,19 +80,13 @@ set smartindent
 set term=screen
 set guioptions-=m
 set cmdheight=1
+set encoding=UTF-8
 
 imap () ()<Left>
 imap [] []<Left>
 imap {} {}<Left>
 imap "" ""<Left>
 imap '' ''<Left>
-
-colorscheme onedark
-let g:onedark_termcolors=256
-let g:lightline = {
-  \ 'colorscheme': 'onedark',
-  \ }
-let g:airline_theme='onedark'
 
 autocmd vimenter * NERDTree
 nmap <F2> :NERDTree<CR>
@@ -118,4 +124,50 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 set laststatus=2
+
+
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 nmap <F8> :TagbarToggle<CR>
+
+
+"----------------hzchirs/vim-material配色方案-----------------
+" Dark
+" set background=dark
+" colorscheme vim-material
+"
+" Palenight
+" let g:material_style='palenight'
+" set background=dark
+" colorscheme vim-material
+"
+" " Oceanic
+" let g:material_style='oceanic'
+" set background=dark
+" colorscheme vim-material
+"
+" " Light
+" set background=light
+" colorscheme vim-material
+" let g:airline_theme='material'
+"---------------------------end-------------------------------
+
+
+"---------------vim-colors-github配色方案---------------------
+"colorscheme github
+"let g:airline_theme = "github"
+"let g:lightline = { 'colorscheme': 'github' }
+"let g:github_colors_soft = 1
+"set background=light
+"let g:github_colors_block_diffmark = 0
+"---------------------------end-------------------------------
+
+
+"---------------------onedark配色方案-------------------------
+colorscheme onedark
+let g:onedark_termcolors=256
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \ }
+let g:airline_theme='onedark'
+"---------------------------end-------------------------------
