@@ -17,7 +17,7 @@ call plug#begin()
   Plug 'mattn/emmet-vim'
   Plug 'hzchirs/vim-material'
   Plug 'cormacrelf/vim-colors-github'
-  Plug 'ryanoasis/vim-devicons'
+  "Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "let $GTAGSLABEL = 'native-pygments'
@@ -170,4 +170,10 @@ let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ }
 let g:airline_theme='onedark'
+"---------------------------end-------------------------------
+
+
+"---------------------微信小程序高亮方案----------------------
+au BufRead,BufNewFile *.wxml set filetype=html
+au BufRead,BufNewFile *.wxss set filetype=css
 "---------------------------end-------------------------------
