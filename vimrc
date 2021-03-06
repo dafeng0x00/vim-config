@@ -177,3 +177,8 @@ let g:airline_theme='onedark'
 au BufRead,BufNewFile *.wxml set filetype=html
 au BufRead,BufNewFile *.wxss set filetype=css
 "---------------------------end-------------------------------
+
+"---------------------#region折叠方案-------------------------
+"使用 #region 上按 zf%
+let b:match_words = '\s*#\s*region.*$:\s*#\s*endregion'
+"---------------------------end-------------------------------
