@@ -30,6 +30,8 @@ let g:Lf_PreviewInPopup = 1
 let g:Lf_GtagsSource = 1
 let g:Lf_GtagsAutoGenerate = 1
 let g:Lf_Gtagsconf = '/Users/mac/vim-config/gtags.conf'
+let g:Lf_UseMemoryCache = 0
+let g:Lf_UseCache = 0
 "需要安装https://github.com/universal-ctags/ctags
 "let g:Lf_Ctags = '/usr/local/bin/ctags'
 let g:Lf_Gtagslabel = 'native-pygments'
@@ -87,6 +89,8 @@ imap [] []<Left>
 imap {} {}<Left>
 imap "" ""<Left>
 imap '' ''<Left>
+
+nmap <F3> :terminal<CR>
 
 autocmd vimenter * NERDTree
 nmap <F2> :NERDTree<CR>

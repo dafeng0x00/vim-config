@@ -11,7 +11,6 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd vimrc
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -22,7 +21,6 @@ set winminwidth=0
 set winwidth=1
 argglobal
 enew
-file NERD_tree_1
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -30,9 +28,8 @@ setlocal fdi=#
 setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
-setlocal nofen
+setlocal fen
 tabnext 1
-badd +184 vimrc
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
