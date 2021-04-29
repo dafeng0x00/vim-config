@@ -4,13 +4,14 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/workspace/fjapp
+cd ~/Downloads
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
 argglobal
 %argdel
+$argadd nginx.conf
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -31,9 +32,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 tabnext 1
-badd +76 src/views/Projects/Assessment/MemberGroup.vue
-badd +564 src/views/Feedback/index.vue
-badd +1 src/views/Login/ChooseAccount.vue
+badd +58 nginx.conf
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -45,6 +44,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
